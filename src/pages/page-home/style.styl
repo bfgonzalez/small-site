@@ -1,2 +1,55 @@
 :host
   display: block
+
+/* persistent navbar */
+nav
+  background: white
+  height: 3.5em
+  width: 100%
+  font-size: 1.3em
+  font-family: sans-serif
+  word-spacing: 1em
+  line-height: 3.5em
+  padding: 1em
+  position: fixed
+  top: 0
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1)
+  & h1 
+    color: #505052
+    float: left
+    word-spacing: 0
+    line-height: 1em
+  & #nav-links
+    float: right
+    margin-right: 2em
+
+#welcome-container 
+  position: absolute;
+  top: 55%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+
+#welcome-text
+  color: #004CF4  
+  font-size: 3em;
+  font-family: "Roboto", sans-serif /* figure out how to make Google Fonts work */
+
+/* links */ 
+a 
+  text-decoration: none 
+  color: #505052
+  &:hover
+    color: #004CF4  
+   
+#home 
+  height: 100vh
+  background: #FFFFFF
+  position: relative
+
+
+
+#about
+  height: 100vh
+  background: blue
+  
+
