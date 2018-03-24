@@ -2,14 +2,16 @@
   display: block
 
 /* colors */
-$grey = #333333
+$grey = #292F36
 $light-blue = #0090fc
-$dark-blue = #004CF4
-$orange = pink
+$pink = #FF6B6B
+$teal = #4ECDC4
 
 /* fonts */
 $main-font = sans-serif 
 
+@import "font-awesome-stylus"
+  
 /* persistent navbar */
 nav
   z-index: 1
@@ -23,15 +25,15 @@ nav
   position: fixed
   top: 0
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1)
-  background: white
+  background: $teal
   display: table
 
 /* links */ 
 a 
   text-decoration: none 
-  color: $grey
+  color: white
   &:hover
-    color: $dark-blue
+    border-bottom: 2px solid white
 
 #nav-links
   float: right
@@ -42,13 +44,13 @@ a
   vertical-align middle
 
 #menu-icon 
-  color: $dark-blue
+  color: white
   cursor: pointer
   font-weight lighter
   font-size 1.3em
 
 #logo
-  color: $grey
+  color: white
   word-spacing: 0
   font-size: 1.2em
   font-weight bold
@@ -66,13 +68,13 @@ a
   transform: translate(-50%, -50%)
   & h1 
     font: lighter 1.7em $main-font
-    color: $dark-blue
+    color: $grey
     width: 10em
 
 #about
   height: 100vh
   font-family: $main-font 
-  background: $light-blue
+  background: $pink
   color: white
 
 #about-container 
@@ -104,6 +106,9 @@ footer
     display: table-cell
     vertical-align middle
     text-align: center
+
+
+
 /* media queries */
 
 /* collapses nav-bar when smaller than 1110px */ 
