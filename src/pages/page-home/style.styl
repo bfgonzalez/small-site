@@ -3,6 +3,7 @@
 
 /* colors */
 $grey = #505052
+$light-blue = #0090fc
 $dark-blue = #004CF4
 $orange = pink
 
@@ -56,7 +57,7 @@ a
 #home 
   height: 100vh
   position: relative
-  margin-bottom: 50%
+  margin-bottom: 15em
 
 #welcome-container 
   position: absolute
@@ -71,7 +72,8 @@ a
 #about
   height: 100vh
   font-family: $main-font 
-  color: $grey
+  background: $light-blue
+  color: white
 
 #about-container 
   position: absolute
@@ -79,13 +81,19 @@ a
   left: 50%
   transform: translate(-50%, -50%)
   & p 
-    width: 15em
+    width: 16em
+    font-size: 1em
     line-height: 1.5em
+
+#work 
+  height: 100vh
+  background: white
+  color: white
 
 /* media queries */
 
 /* collapses nav-bar when smaller than 1110px */ 
-@media screen and (max-width: 1110px) 
+@media screen and (max-width: 768px) 
   #nav-links
     display: none
 
@@ -100,5 +108,20 @@ a
 
   #about-container p
     width: 25em
+
+@media screen and (min-width: 768px)
+  #welcome-container h1
+    font-size: 2.5em
+
+  #about-container p
+    font-size: 1.3em
+
+@media screen and (min-width: 1024px)
+  #welcome-container h1
+    width: 25em
+    text-align: center;
+
+  #about-container p
+   width: 30em
 
   
