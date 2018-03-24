@@ -1,56 +1,104 @@
 :host
   display: block
 
+/* colors */
+$grey = #505052
+$dark-blue = #004CF4
+$orange = pink
+
+/* fonts */
+$main-font = sans-serif 
+
 /* persistent navbar */
 nav
-  background: white
+  z-index: 1
   height: 3.5em
   width: 100%
   font-size: 1.3em
-  font-family: sans-serif
+  font-family: $main-font
   word-spacing: 1em
   line-height: 3.5em
   padding: 1em
   position: fixed
   top: 0
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1)
-  & h1 
-    color: #505052
-    float: left
-    word-spacing: 0
-    line-height: 1em
-    cursor: pointer
-  & #nav-links
-    float: right
-    margin-right: 2em
-
-#welcome-container 
-  position: absolute;
-  top: 55%;
-  left: 52%;
-  transform: translate(-50%, -50%);
-
-#welcome-text
-  color: #004CF4  
-  font-size: 3em;
-  font-family: "Roboto", sans-serif /* figure out how to make Google Fonts work */
+  background: white
+  display: table
 
 /* links */ 
 a 
   text-decoration: none 
-  color: #505052
+  color: $grey
   &:hover
-    color: #004CF4  
+    color: $dark-blue
+
+#nav-links
+  float: right
+  margin-right: 2em
+
+#menu-container 
+  display: table-cell
+  vertical-align middle
+
+#menu-icon 
+  color: $dark-blue
+  cursor: pointer
+  font-weight lighter
+  font-size 1.3em
+
+#logo
+  color: $grey
+  word-spacing: 0
+  font-size: 1.2em
+  font-weight bold
+  margin-left: -0.7em
    
 #home 
   height: 100vh
-  background: #FFFFFF
   position: relative
+  margin-bottom: 50%
 
-
+#welcome-container 
+  position: absolute
+  top: 55%
+  left: 50%
+  transform: translate(-50%, -50%)
+  & h1 
+    font: lighter 1.7em $main-font
+    color: $dark-blue
+    width: 10em
 
 #about
   height: 100vh
-  background: blue
-  
+  font-family: $main-font 
+  color: $grey
 
+#about-container 
+  position: absolute
+  top: 55%
+  left: 50%
+  transform: translate(-50%, -50%)
+  & p 
+    width: 15em
+    line-height: 1.5em
+
+/* media queries */
+
+/* collapses nav-bar when smaller than 1110px */ 
+@media screen and (max-width: 1110px) 
+  #nav-links
+    display: none
+
+@media screen and (min-width: 425px)
+  #logo 
+    font-size: 1.5em
+
+@media screen and (min-width: 600px)
+  #welcome-container h1
+    font-size: 2em
+    width: 12em
+
+  #about-container p
+    width: 25em
+
+  
