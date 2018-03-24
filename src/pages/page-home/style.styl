@@ -2,7 +2,7 @@
   display: block
 
 /* colors */
-$grey = #505052
+$grey = #333333
 $light-blue = #0090fc
 $dark-blue = #004CF4
 $orange = pink
@@ -17,8 +17,8 @@ nav
   width: 100%
   font-size: 1.3em
   font-family: $main-font
-  word-spacing: 1em
   line-height: 3.5em
+  word-spacing: 1em
   padding: 1em
   position: fixed
   top: 0
@@ -90,6 +90,20 @@ a
   background: white
   color: white
 
+footer 
+  height: 5em
+  width: 100%
+  color: white
+  background: $grey
+  font-size: 1.3em
+  font-family: $main-font
+  letter-spacing: 1em
+  position: absolute
+  display: table
+  & a 
+    display: table-cell
+    vertical-align middle
+    text-align: center
 /* media queries */
 
 /* collapses nav-bar when smaller than 1110px */ 
