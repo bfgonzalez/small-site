@@ -1,18 +1,16 @@
 :host
   display: block
 
-/* colors */
+// colors 
 $grey = #292F36
 $light-blue = #0090fc
 $pink = #FF6B6B
 $teal = #4ECDC4
 
-/* fonts */
+// fonts 
 $main-font = sans-serif 
-
-@import "font-awesome-stylus"
   
-/* persistent navbar */
+// persistent navbar 
 nav
   z-index: 1
   height: 3.5em
@@ -28,7 +26,7 @@ nav
   background: $teal
   display: table
 
-/* links */ 
+// links  
 a 
   text-decoration: none 
   color: white
@@ -59,11 +57,10 @@ a
 #home 
   height: 100vh
   position: relative
-  margin-bottom: 15em
 
 #welcome-container 
   position: absolute
-  top: 55%
+  top: 60%
   left: 50%
   transform: translate(-50%, -50%)
   & h1 
@@ -76,10 +73,11 @@ a
   font-family: $main-font 
   background: $pink
   color: white
+  position: relative
 
 #about-container 
   position: absolute
-  top: 55%
+  top: 50%
   left: 50%
   transform: translate(-50%, -50%)
   & p 
@@ -88,30 +86,92 @@ a
     line-height: 1.5em
 
 #work 
-  height: 100vh
+  height: auto
   background: white
-  color: white
 
-footer 
+#work-container 
+  width: 98vw
+  padding-top: 5em
+  display: block
+  margin: auto
+
+.project-tile 
+  max-height: 25em
+  display: inline-block
+  cursor: pointer
+
+.project-tile:hover 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+
+.project-name 
+  margin: auto
+  font-size: 1.2em
+  font-family: $main-font
+  text-align center
+  color: $grey
+  padding: 0.1em
+
+// img thumbnails  
+img 
+  width: 100%
+
+/*footer 
   height: 5em
   width: 100%
   color: white
   background: $grey
   font-size: 1.3em
   font-family: $main-font
-  letter-spacing: 1em
   position: absolute
   display: table
   & a 
     display: table-cell
     vertical-align middle
-    text-align: center
+    text-align: center */
+
+// responsive grid layout 
+* 
+  box-sizing: border-box
+
+.row::after 
+  content: ""
+  clear: both
+  display: table
+
+[class*="col-"] 
+  float: left
+  padding: 15px
+  width: 100%
+
+@media only screen and (min-width: 768px) 
+  // For desktop
+  .col-1 
+    width: 8.33%
+  .col-2 
+    width: 16.66%
+  .col-3  
+    width: 25%
+  .col-4 
+    width: 33.33%
+  .col-5 
+    width: 41.66%
+  .col-6 
+    width: 50%
+  .col-7 
+    width: 58.33%
+  .col-8 
+    width: 66.66%
+  .col-9 
+    width: 75%
+  .col-10 
+    width: 83.33%
+  .col-11 
+    width: 91.66%
+  .col-12 
+    width: 100%
 
 
-
-/* media queries */
-
-/* collapses nav-bar when smaller than 1110px */ 
+// media queries 
 @media screen and (max-width: 768px) 
   #nav-links
     display: none
