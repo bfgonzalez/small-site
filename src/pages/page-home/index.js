@@ -22,3 +22,5 @@ class Component extends LittleqPageMixin(Element) {
   ? customElements.define(Component.is, Component)
   : console.warn(`${Component.is} is already defined`);
 
+
+
